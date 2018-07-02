@@ -38,7 +38,8 @@ public class BoardController {
 	}
 	
 	@RequestMapping(value="/listAll", method=RequestMethod.GET)
-	public void listAll(Model model) {
+	public void listAll(Model model) throws Exception {
 		logger.info("show all List................");
+		model.addAttribute("list",service.listAll());
 	}
 }
